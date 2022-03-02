@@ -1,0 +1,55 @@
+@function get-color($color, $opacity: 1) {
+  @if map-has-key($colors, $color) {
+    @return transparentize(map-get($colors, $color), 1 - $opacity);
+  }
+  @return #f0f;
+}
+
+@function get-font-weight($fontw) {
+  @if map-has-key($font-weight, $fontw) {
+    @return (map-get($font-weight, $fontw));
+  }
+  @return 900;
+}
+
+@function get-font-family($fontf) {
+  @if map-has-key($font-family, $fontf) {
+    @return (map-get($font-family, $fontf));
+  }
+  @return 'arial', sans-serif;
+}
+
+@function get-font-size($fonts) {
+  @if map-has-key($font-size, $fonts) {
+    @return (map-get($font-size, $fonts));
+  }
+  @return 60px;
+}
+
+@function get-letter-spacing($l-spacing) {
+  @if map-has-key($letter-spacing, $l-spacing) {
+    @return (map-get($letter-spacing, $l-spacing));
+  }
+  @return 1em;
+}
+
+@function get-line-height($l-height) {
+  @if map-has-key($line-height, $l-height) {
+    @return (map-get($line-height, $l-height));
+  }
+  @return 3;
+}
+
+@function get-gapn($gap) {
+  @if map-has-key($gapn, $gap) {
+    @return (map-get($gapn, $gap));
+  }
+  @return 200px;
+}
+
+@function get-border-r($border) {
+  @if map-has-key($border-r, $border) {
+    @return (map-get($border-r, $border));
+  }
+  @return 50%;
+}

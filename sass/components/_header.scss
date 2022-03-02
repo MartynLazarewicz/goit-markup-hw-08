@@ -1,0 +1,101 @@
+.header {
+  height: 80px;
+  border-bottom: 1px solid get-color('very-light-gray');
+}
+
+.navigation {
+  height: 80px;
+}
+
+.nav {
+  gap: get-gapn('93');
+
+  &__logo {
+    font-size: get-font-size('26');
+    font-family: get-font-family('raleway'), sans-serif;
+    font-weight: get-font-weight('bold');
+    letter-spacing: get-letter-spacing('03');
+    line-height: get-line-height('31');
+    &--accent {
+      color: get-color('accent');
+    }
+  }
+
+  &__list {
+    gap: get-gapn('46');
+  }
+
+  &__link {
+    position: relative;
+    font-size: get-font-size('14');
+    font-weight: get-font-weight('light');
+    font-family: get-font-family('roboto'), sans-serif;
+    line-height: get-line-height('16');
+    letter-spacing: get-letter-spacing('02');
+    color: get-color('primary');
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: get-color('accent');
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: -30px;
+      right: 0;
+      width: 0;
+      height: 5px;
+      background-color: get-color('accent');
+      border-radius: get-border-r('4');
+      transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      left: 0;
+    }
+
+    &--active {
+      color: get-color('accent');
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: -30px;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background-color: get-color('accent');
+        border-radius: get-border-r('4');
+      }
+    }
+  }
+}
+
+.contact {
+  gap: 50px;
+
+  &__link {
+    color: get-color('secondary');
+    fill: get-color('secondary');
+    font-size: get-font-size('14');
+    font-weight: get-font-weight('light');
+    line-height: get-line-height('16');
+    letter-spacing: get-letter-spacing('02');
+    gap: get-gapn('10');
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: get-color('accent');
+      fill: get-color('accent');
+    }
+  }
+}
