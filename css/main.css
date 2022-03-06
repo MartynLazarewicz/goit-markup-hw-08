@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #2196f3 #c2d2e4;
 }
