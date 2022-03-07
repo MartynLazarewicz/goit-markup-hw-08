@@ -27,6 +27,11 @@ body {
   color: $color-primary;
 }
 
+.noScroll {
+  position: fixed;
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1200px;
   height: auto;

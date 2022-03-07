@@ -12,7 +12,7 @@
   top: 0;
   background: rgba(0, 0, 0, 0.2);
   transition: visibility 250ms $trans-func, opacity 250ms $trans-func;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .is-hidden {
