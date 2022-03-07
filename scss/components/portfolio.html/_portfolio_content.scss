@@ -11,7 +11,7 @@
 
     &__item {
       max-width: 450px;
-      height: auto;
+      height: 100%;
       background-color: $color-white;
       border: 1px solid #eeeeee;
       transition: box-shadow 250ms $trans-func, background 250ms $trans-func;
@@ -88,7 +88,7 @@
   .portfolio {
     &__content {
       &__list {
-        grid-template-columns: repeat(auto-fit, minmax(342px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(322px, auto));
       }
       &__item {
         max-width: 354px;
