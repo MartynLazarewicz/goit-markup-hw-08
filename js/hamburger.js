@@ -1,6 +1,6 @@
 const btnHamburger = document.querySelector('#menuHamburger');
 const header = document.querySelector('.header');
-const menu = document.querySelector('.mobileMenu');
+const menu = document.querySelector('.navigation--mobile');
 const hamburgerMenu = document.querySelector('.hamburger-lines');
 
 btnHamburger.addEventListener('click', function () {

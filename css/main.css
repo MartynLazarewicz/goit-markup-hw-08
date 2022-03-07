@@ -135,18 +135,33 @@ button {
   height: inherit;
 }
 
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.navigation--mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 99;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 40px;
+  padding-top: 46px;
+  padding-bottom: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: inherit;
-  width: 100%;
+  overflow-y: scroll;
+  gap: 70px;
 }
 
 .nav__logo {
@@ -165,21 +180,19 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 46px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
 }
 
 .nav__link {
   position: relative;
-  font-size: 14px;
+  font-size: 40px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
-  line-height: 1rem;
+  line-height: 2.9375rem;
   letter-spacing: 0.02em;
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -190,79 +203,77 @@ button {
   color: #2196f3;
 }
 
-.nav__link::after {
-  position: absolute;
-  content: '';
-  display: block;
-  bottom: -31px;
-  right: 0;
-  width: 0;
-  height: 5px;
-  background-color: #2196f3;
-  border-radius: 4px;
-  -webkit-transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav__link:hover::after, .nav__link:focus::after {
-  width: 100%;
-  left: 0;
-}
-
 .nav__link--active {
   color: #2196f3;
 }
 
-.nav__link--active::after {
-  position: absolute;
-  content: '';
-  display: block;
-  bottom: -31px;
-  right: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #2196f3;
-  border-radius: 4px;
+.nav__socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav__socials-item {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.375rem;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.nav__socials-item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.nav__socials-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 64px;
 }
 
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 32px;
 }
 
 .contact__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #757575;
-  fill: #757575;
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1rem;
   letter-spacing: 0.02em;
-  gap: 10px;
-  -webkit-transition-property: color, fill;
-  transition-property: color, fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__link--tel {
+  font-size: 34px;
+  line-height: 2.5rem;
+}
+
+.contact__link--mail {
+  font-size: 24px;
+  line-height: 1.75rem;
 }
 
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
-  fill: #2196f3;
 }
 
 .hide-for-mobile {
@@ -270,7 +281,9 @@ button {
 }
 
 .hide-for-desktop {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .open .hamburger-lines > span:first-child {
@@ -354,24 +367,130 @@ button {
   right: 15px;
 }
 
-.mobileMenu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  z-index: 99;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media screen and (min-width: 768px) {
+  .navigation--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: inherit;
+    width: 100%;
+    position: initial;
+    width: 100%;
+  }
+  .nav__logo {
+    font-size: 26px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    line-height: 1.938rem;
+    letter-spacing: 0.03em;
+  }
+  .nav__logo--accent {
+    color: #2196f3;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 46px;
+  }
+  .nav__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    line-height: 1rem;
+    letter-spacing: 0.02em;
+    color: #212121;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__link:hover, .nav__link:focus {
+    color: #2196f3;
+  }
+  .nav__link::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -31px;
+    right: 0;
+    width: 0;
+    height: 5px;
+    background-color: #2196f3;
+    border-radius: 4px;
+    -webkit-transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__link:hover::after, .nav__link:focus::after {
+    width: 100%;
+    left: 0;
+  }
+  .nav__link--active {
+    color: #2196f3;
+  }
+  .nav__link--active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -31px;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #2196f3;
+    border-radius: 4px;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .contact__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #757575;
+    fill: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0.02em;
+    gap: 10px;
+    -webkit-transition-property: color, fill;
+    transition-property: color, fill;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact__link:hover, .contact__link:focus {
+    color: #2196f3;
+    fill: #2196f3;
+  }
   .hide-for-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
