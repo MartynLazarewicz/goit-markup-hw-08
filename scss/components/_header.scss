@@ -154,7 +154,6 @@
   align-items: center;
   cursor: pointer;
   z-index: 999;
-  transition: transform 250ms $trans-func, opacity 200ms $trans-func, background-color 250ms $trans-func;
 
   &:hover .line {
     background: $color-accent;
@@ -162,7 +161,7 @@
 
   .line {
     display: block;
-    height: 2.6px;
+    height: 3px;
     width: 108%;
     border-radius: 10px;
     transform-origin: 3px 1px;
@@ -172,16 +171,16 @@
 
   .line1 {
     transform-origin: 10% 213%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
   }
 
   .line2 {
-    transition: transform 0.1s ease-in-out;
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
   }
 
   .line3 {
     transform-origin: 23% -33%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
   }
 }
 
