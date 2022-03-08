@@ -1289,7 +1289,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  padding: 40px 40px 0 40px;
+  padding: 30px 40px 0 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
