@@ -20,7 +20,7 @@
     <!-- modern-normalize -->
     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link async rel="prefetch stylesheet" href="css/main.min.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- Title -->
@@ -108,6 +108,22 @@
     </header>
     <main>
       <section class="hero">
+        <picture>
+          <source srcset="
+										./images/hero1600.jpg    1x,
+										./images/hero1600@2x.jpg 2x
+									" media="(min-width: 1200px)">
+          <source srcset="
+										./images/hero768.jpg    1x,
+										./images/hero768@2x.jpg 2x
+									" media="(min-width: 768px)">
+								<source srcset="
+										./images/hero768.jpg    1x,
+										./images/hero768@2x.jpg 2x
+									" media="(min-width: 480px)">
+								<img class="hero__bg" src="./images/hero480.jpg" alt="" width="480" height="400">
+        </picture>
+								
         <div class="wrapper hero__content">
           <h1 class="hero__title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
           <button class="hero__btn" type="button" data-modal-open>Zamów usługe</button>
@@ -183,7 +199,21 @@
           <h2 class="title--h2">Nasz zespół</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team__item-img" src="images/brown_shirt_man.jpg" alt="Brown_shirt_man" />
+              <picture>
+                <source srcset="
+										./images/brown_shirt_man270.jpg    1x,
+										./images/brown_shirt_man270@2x.jpg 2x
+									" media="(min-width: 1200px)">
+                <source srcset="
+										./images/brown_shirt_man354.jpg    1x,
+										./images/brown_shirt_man354@2x.jpg 2x
+									" media="(min-width: 768px)">
+								<source srcset="
+										./images/brown_shirt_man354.jpg    1x,
+										./images/brown_shirt_man354@2x.jpg 2x
+									" media="(min-width: 480px)">
+              <img class="team__item-img" src="images/brown_shirt_man450.jpg" alt="Brown_shirt_man" />
+              </picture>
               <h4 class="team__item-title">Jhon Doe</h4>
               <p class="team__item-description">Product designer</p>
               <ul class="team__social-list ">
@@ -218,7 +248,21 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__item-img" src="images/blonde_woman.jpg" alt="Blonde_woman"/>
+              <picture>
+                <source srcset="
+										./images/blonde_woman270.jpg    1x,
+										./images/blonde_woman270@2x.jpg 2x
+									" media="(min-width: 1200px)">
+                <source srcset="
+										./images/blonde_woman354.jpg    1x,
+										./images/blonde_woman354@2x.jpg 2x
+									" media="(min-width: 768px)">
+								<source srcset="
+										./images/blonde_woman354.jpg    1x,
+										./images/blonde_woman354@2x.jpg 2x
+									" media="(min-width: 480px)">
+                  <img class="team__item-img" src="images/blonde_woman450.jpg" alt="Blonde_woman"/>
+              </picture>
               <h4 class="team__item-title">Jhon Doe</h4>
               <p class="team__item-description">Frontend Developer</p>
               <ul class="team__social-list ">
@@ -253,7 +297,22 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__item-img" src="images/blue_shirt_man.jpg" alt="Blue_shirt_man"/>
+              <picture>
+                <source srcset="
+										./images/blue_shirt_man270.jpg    1x,
+										./images/blue_shirt_man270@2x.jpg 2x
+									" media="(min-width: 1200px)">
+                <source srcset="
+										./images/blue_shirt_man354.jpg    1x,
+										./images/blue_shirt_man354@2x.jpg 2x
+									" media="(min-width: 768px)">
+								<source srcset="
+										./images/blue_shirt_man354.jpg    1x,
+										./images/blue_shirt_man354@2x.jpg 2x
+									" media="(min-width: 480px)">
+                  <img class="team__item-img" src="images/blue_shirt_man450.jpg" alt="Blue_shirt_man"/>
+              </picture>
+              
               <h4 class="team__item-title">Jhon Doe</h4>
               <p class="team__item-description">Marketing</p>
               <ul class="team__social-list ">
@@ -288,7 +347,22 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__item-img" src="images/black_tshirt_man.jpg" alt="Black_tshirt_man"/>
+              <picture>
+                <source srcset="
+										./images/black_tshirt_man270.jpg    1x,
+										./images/black_tshirt_man270@2x.jpg 2x
+									" media="(min-width: 1200px)">
+                <source srcset="
+										./images/black_tshirt_man354.jpg    1x,
+										./images/black_tshirt_man354@2x.jpg 2x
+									" media="(min-width: 768px)">
+								<source srcset="
+										./images/black_tshirt_man354.jpg    1x,
+										./images/black_tshirt_man@2x.jpg 2x
+									" media="(min-width: 480px)">
+                  <img class="team__item-img" src="images/black_tshirt_man450.jpg" alt="Black_tshirt_man"/>
+              </picture>
+              
               <h4 class="team__item-title">Jhon Doe</h4>
               <p class="team__item-description">UI Designer</p>
               <ul class="team__social-list ">
